@@ -18,3 +18,7 @@ in `problemB.py`.
 modules.
 
 The solutions are written for Python 3, and the `tests.py` in particular makes use of features which are not backward compatible.
+
+Kind regards
+
+Sam Frances
