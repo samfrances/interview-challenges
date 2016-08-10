@@ -2,16 +2,8 @@ import unittest
 from problemA import kitkat as kitkatA
 from problemB import kitkat as kitkatB
 
-label = {
-	kitkatA: 'A',
-	kitkatB: 'B'
-}
-
 threes = [x * 3 for x in range(1, 35)]
 fives = [x * 5 for x in range(1, 21)]
-
-print(threes)
-print(fives)
 
 kitkat_test_sequence = ['KitKat' if x in threes and x in fives
 						else 'Kit' if x in threes
