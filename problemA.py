@@ -21,7 +21,12 @@ def kitkat():
         kit = 'Kit' if n % 3 == 0 else ''
         kat = 'Kat' if n % 5 == 0 else ''
 
-        yield kit + kat or str(n)
+        # Taking advantage of the truthy-ness of non-empty strings, and the
+        # falsy-ness of empty strings, kit / kat act both as flags 
+        # indicating divisibility by 3 / 5, and as the strings to return
+        # in case of such divisibility.
+        
+        yield kit + kat or str(n) # Short-circuiting
 
 if __name__ == '__main__':
     for st in kitkat():

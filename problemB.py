@@ -24,9 +24,12 @@ def divisible(dividend, divisor):
     if divisor == 0:
         raise ZeroDivisionError("integer division or modulo by zero")
 
-    n = abs(dividend)
-    m = abs(divisor)
+    n = abs(dividend) # So as to work with negative parameters
+    m = abs(divisor)  # (although not necessary for this task).
 
+    # If repeatedly subtracting the divisor from the dividend reaches zero
+    # the dividend is divisible by the divisor. If this subtraction 
+    # overshoots zero, the dividend is not divisible by the divisor.
     while n > 0:
         n -= m
     return n == 0
@@ -40,7 +43,8 @@ def kitkat():
 
     This version does not use the modulo operator or the division operators.
     """
-
+    # Exactly the same as in problemA.py, but substituting the divisible
+    # function for the test of divisibility using the % operator.
     for n in range(1, 101):
         kit = 'Kit' if divisible(n, 3) else ''
         kat = 'Kat' if divisible(n, 5) else ''
