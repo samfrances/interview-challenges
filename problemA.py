@@ -13,7 +13,7 @@ def kitkat():
         kit = 'Kit' if n % 3 == 0 else ''
         kat = 'Kat' if n % 5 == 0 else ''
         
-        yield kit + kat or n
+        yield kit + kat or str(n)
 
 if __name__ == '__main__':
     for st in kitkat():

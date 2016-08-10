@@ -21,7 +21,7 @@ def kitkat():
         kit = 'Kit' if divisible(n, 3) else ''
         kat = 'Kat' if divisible(n, 5) else ''
         
-        yield kit + kat or n
+        yield kit + kat or str(n)
 
 if __name__ == '__main__':
     for st in kitkat():
