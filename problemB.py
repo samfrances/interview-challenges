@@ -24,11 +24,11 @@ def divisible(dividend, divisor):
     if divisor == 0:
         raise ZeroDivisionError("integer division or modulo by zero")
 
-    n = abs(dividend) # So as to work with negative parameters
-    m = abs(divisor)  # (although not necessary for this task).
+    n = abs(dividend)  # So as to work with negative parameters
+    m = abs(divisor)   # (although not necessary for this task).
 
     # If repeatedly subtracting the divisor from the dividend reaches zero
-    # the dividend is divisible by the divisor. If this subtraction 
+    # the dividend is divisible by the divisor. If this subtraction
     # overshoots zero, the dividend is not divisible by the divisor.
     while n > 0:
         n -= m

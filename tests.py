@@ -38,7 +38,7 @@ class TestDivisible(unittest.TestCase):
         """
         for i in range(-100, 101):
             for j in range(-100, 101):
-                if j != 0: # Skip zero divisor
+                if j != 0:  # Skip zero divisor
                     with self.subTest(i=i, j=j, mod=(i % j)):
                         self.assertEqual(divisible(i, j), i % j == 0)
 
