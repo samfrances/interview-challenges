@@ -3,7 +3,7 @@
 # Version 1 of kitkat, where use of the % operator is permitted
 
 def kitkat():
-    """Prints the numbers from 1 to 100, one per line.  However for multiples of 3
+    """Yields the numbers from 1 to 100, one per line.  However for multiples of 3
     print 'Kit' instead of the number and for the multiples of five print
     'Kat'.  For numbers which are a multiple of both 3 and 5, print 'KitKat'.
 
