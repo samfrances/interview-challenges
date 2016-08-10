@@ -16,3 +16,5 @@ in `problemB.py`.
 
 `tests.py` provides unit tests for the various functions contained in these
 modules.
+
+The solutions are written for Python 3, and the `tests.py` in particular makes use of features which are not backward compatible.
