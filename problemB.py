@@ -16,15 +16,20 @@ def divisible(dividend, divisor):
 
     Args:
         dividend (int): the dividend
-        divisor: (int): the divisor
+        divisor: (non-zero int): the divisor
     Returns:
         True if divisor is divisible by divisor.
         False otherwise.
     """
+    if divisor == 0:
+        raise ZeroDivisionError("integer division or modulo by zero")
 
-    while dividend > 0:
-        dividend -= divisor
-    return dividend == 0
+    n = abs(dividend)
+    m = abs(divisor)
+
+    while n > 0:
+        n -= m
+    return n == 0
 
 
 def kitkat():

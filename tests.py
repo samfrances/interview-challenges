@@ -36,10 +36,15 @@ class TestDivisible(unittest.TestCase):
         """Test that the divisible function returns the same answer as
         checking for divisibility using the modulo operator.
         """
-        for i in range(1, 101):
-            for j in range(1, 101):
-                with self.subTest(i=i, j=j, mod=(i % j)):
-                    self.assertEqual(divisible(i, j), i % j == 0)
+        for i in range(-100, 101):
+            for j in range(-100, 101):
+                if j != 0: # Skip zero divisor
+                    with self.subTest(i=i, j=j, mod=(i % j)):
+                        self.assertEqual(divisible(i, j), i % j == 0)
+
+    def test_zero_divisor(self):
+        """Test that a divisor of zero raises a ZeroDivisionError."""
+        self.assertRaises(ZeroDivisionError, divisible, dividend=5, divisor=0)
 
 
 if __name__ == '__main__':
