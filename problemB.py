@@ -22,9 +22,9 @@ def divisible(dividend, divisor):
         False otherwise.
     """
 
-    while n > 0:
-        n -= by
-    return n == 0
+    while dividend > 0:
+        dividend -= divisor
+    return dividend == 0
 
 
 def kitkat():
