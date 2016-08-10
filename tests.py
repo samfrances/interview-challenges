@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import unittest
 from problemA import kitkat as kitkatA
 from problemB import kitkat as kitkatB
