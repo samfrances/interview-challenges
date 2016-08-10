@@ -13,10 +13,7 @@ def kitkat():
         kit = 'Kit' if n % 3 == 0 else ''
         kat = 'Kat' if n % 5 == 0 else ''
         
-        if not (kit or kat):
-            yield n
-        else:
-            yield "{0}{1}".format(kit, kat)
+        yield kit + kat or n
 
 if __name__ == '__main__':
     for st in kitkat():
